@@ -30,6 +30,11 @@ const App = () => {
               <activity key={activity.id} activity={activity} />
             ))}
           </ul>
+          <form>
+            <button>
+              <h3>Park Rules</h3>
+              </button>
+          </form>
         </div>
       ))}
     </div>
