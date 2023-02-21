@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-//import Activity from '.Components/Thingstodo/Activity';
 
 const App = () => {
   const [parkData, setParkData] = useState([]);
@@ -16,16 +15,26 @@ const App = () => {
   }, []);
 
   return (
+    
     <div>
+      <form>
+    <button>Parks</button>
+       </form>
+
       {parkData.map((park) => (
         <div key={park.id}>
           <h2>{park.fullName}</h2>
           <p>{park.description}</p>
           <ul>
             {park.activities.map((activity) => (
-              <Activity key={activity.id} activity={activity} />
+              <activity key={activity.id} activity={activity} />
             ))}
           </ul>
+          <form>
+            <button>
+              <h3>Park Rules</h3>
+              </button>
+          </form>
         </div>
       ))}
     </div>
@@ -33,3 +42,4 @@ const App = () => {
 };
 
 export default App;
+
