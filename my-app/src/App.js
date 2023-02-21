@@ -1,27 +1,35 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
+import Activity from './components/Things to do /Activity.js';
 
+const App = () => {
+  const [parkData, setParkData] = useState([]);
 
-
-function App() {
-const [activities, setActivities] = useState([])
   useEffect(() => {
-   fetch('https://developer.nps.gov/api/v1/parks?parkCode=acad&api_key=bV8ZuEbygnA1MeCloBrSanqdglZI8EiLkbPxmuRD')
-      .then((res) => {
-        if(res.ok) {
-          return res.json();
-        }
-       throw new Error("Server says bad response");
-      })
-      .then((res)=>{ console.log(res.activities); console.log(res);})
-      .catch((err)=> console.log(err));
-},[]);
-    
-  return (
-    <div>{ activities && activities.map((userActivities)=>{
-      return <div key={userActivities.id}>{userActivities.name}</div>
-    })}
-      </div>);
-}
+    const fetchParkData = async () => {
+      const response = await fetch(
+        'https://developer.nps.gov/api/v1/parks?parkCode=acad&api_key=bV8ZuEbygnA1MeCloBrSanqdglZI8EiLkbPxmuRD'
+      );
+      const data = await response.json();
+      setParkData(data.data);
+    };
+    fetchParkData();
+  }, []);
 
+  return (
+    <div>
+      {parkData.map((park) => (
+        <div key={park.id}>
+          <h2>{park.fullName}</h2>
+          <p>{park.description}</p>
+          <ul>
+            {park.activities.map((activity) => (
+              <Activity key={activity.id} activity={activity} />
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  );
+};
 
 export default App;
