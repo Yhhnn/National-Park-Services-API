@@ -1,29 +1,27 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+
+
 
 function App() {
-   
-  const[data,setData] = useState(null);
-
+const [activities, setActivities] = useState([])
   useEffect(() => {
-   fetch('https://catfact.ninja/docs')
+   fetch('https://developer.nps.gov/api/v1/parks?parkCode=acad&api_key=bV8ZuEbygnA1MeCloBrSanqdglZI8EiLkbPxmuRD')
       .then((res) => {
         if(res.ok) {
           return res.json();
         }
        throw new Error("Server says bad response");
       })
-      .then((res)=>{ console.log(res.data); console.log(res);})
+      .then((res)=>{ console.log(res.activities); console.log(res);})
       .catch((err)=> console.log(err));
 },[]);
     
   return (
-    <div>{ data && data.map((userData)=>{
-      return <div key={userData.breed}>{userData.country}</div>
+    <div>{ activities && activities.map((userActivities)=>{
+      return <div key={userActivities.id}>{userActivities.name}</div>
     })}
-      </div>
-
-  
-  );
+      </div>);
 }
+
 
 export default App;
