@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Activity from './components/Things to do /Activity.js';
 
 const App = () => {
   const [parkData, setParkData] = useState([]);
@@ -16,14 +15,19 @@ const App = () => {
   }, []);
 
   return (
+    
     <div>
+      <form>
+    <button>Parks</button>
+       </form>
+
       {parkData.map((park) => (
         <div key={park.id}>
           <h2>{park.fullName}</h2>
           <p>{park.description}</p>
           <ul>
             {park.activities.map((activity) => (
-              <Activity key={activity.id} activity={activity} />
+              <activity key={activity.id} activity={activity} />
             ))}
           </ul>
         </div>
