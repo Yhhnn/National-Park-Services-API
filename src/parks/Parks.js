@@ -1,9 +1,9 @@
 import React from 'react';
 
-function LookingForMore() {
+function Parks() {
   return (
     <div>
-      <h1>Things to Do</h1>
+      <h1>Parks</h1>
       <p>Here are some things you can do:</p>
       <ul>
         <li><a href="#">Activity 1</a></li>
@@ -14,6 +14,6 @@ function LookingForMore() {
   );
 }
 
-export default LookingForMore;
+export default Parks;
 
 // Create similar components for Parks and Looking for More
