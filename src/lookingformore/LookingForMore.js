@@ -1,20 +1,33 @@
-import React from 'react';
 import './LookingForMore.css';
+import React, { useState, useEffect } from 'react';
 
-function LookingForMore() {
+function Jokes() {
+  const [joke, setJoke] = useState('');
+
+  useEffect(() => {
+    fetch('https://v2.jokeapi.dev/joke/Programming?amount=10')
+      .then(response => response.json())
+      .then(data => setJoke(data.jokes[0].setup + ' ' + data.jokes[0].punchline))
+      .catch(error => console.log(error));
+  }, []);
+
+  const handleClick = () => {
+    fetch('https://v2.jokeapi.dev/joke/Programming?amount=10')
+      .then(response => response.json())
+      .then(data => setJoke(data.jokes[0].setup + ' ' + data.jokes[0].punchline))
+      .catch(error => console.log(error));
+  };
+
   return (
     <div>
-      <h1>Looking for more ?</h1>
-      <p>Here are some things you can do:</p>
-      <ul>
-        <li><a href="#">Activity 1</a></li>
-        <li><a href="#">Activity 2</a></li>
-        <li><a href="#">Activity 3</a></li>
-      </ul>
+      <h1>Jokes</h1>
+      <p>Click the button to get a programming joke:</p>
+      <button onClick={handleClick}>Get Joke</button>
+      <p>{joke}</p>
+      
     </div>
   );
 }
 
-export default LookingForMore;
-
+export default Jokes;
 

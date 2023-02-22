@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import HomePage from './HomePage/HousePage';
-import ThingsToDo from './thingstodo/ThingsToDo';
+import ThingsToDo from './todo/ThingsToDo';
 import Parks from './parks/Parks';
 import LookingForMore from './lookingformore/LookingForMore';
 
@@ -21,3 +21,4 @@ function App() {
 }
 
 export default App;
+
