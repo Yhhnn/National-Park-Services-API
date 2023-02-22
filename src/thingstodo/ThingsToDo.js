@@ -1,4 +1,5 @@
 import React from 'react';
+import './ThingsToDo.css';
 
 function ThingsToDo() {
   return (
@@ -16,4 +17,4 @@ function ThingsToDo() {
 
 export default ThingsToDo;
 
-// Create similar components for Parks and Looking for More
+

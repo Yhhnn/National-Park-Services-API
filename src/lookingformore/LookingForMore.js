@@ -1,4 +1,5 @@
 import React from 'react';
+import './LookingForMore.css';
 
 function LookingForMore() {
   return (
@@ -17,4 +18,3 @@ function LookingForMore() {
 export default LookingForMore;
 
 
-// Create similar components for Parks and Looking for More

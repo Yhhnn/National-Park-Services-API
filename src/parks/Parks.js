@@ -1,4 +1,5 @@
 import React from 'react';
+import './Parks.css';
 
 function Parks() {
   return (
@@ -16,4 +17,4 @@ function Parks() {
 
 export default Parks;
 
-// Create similar components for Parks and Looking for More
+
