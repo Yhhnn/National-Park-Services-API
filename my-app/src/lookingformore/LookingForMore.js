@@ -1,10 +1,9 @@
 import React from 'react';
-import './Parks.css';
 
-function Parks() {
+function LookingForMore() {
   return (
     <div>
-      <h1>Parks</h1>
+      <h1>Things to Do</h1>
       <p>Here are some things you can do:</p>
       <ul>
         <li><a href="#">Activity 1</a></li>
@@ -15,6 +14,6 @@ function Parks() {
   );
 }
 
-export default Parks;
+export default LookingForMore;
 
-
+// Create similar components for Parks and Looking for More
