@@ -1,9 +1,10 @@
 import React from 'react';
+import './LookingForMore.css';
 
-function ThingsToDo() {
+function LookingForMore() {
   return (
     <div>
-      <h1>Things to Do</h1>
+      <h1>Looking for more ?</h1>
       <p>Here are some things you can do:</p>
       <ul>
         <li><a href="#">Activity 1</a></li>
@@ -14,6 +15,6 @@ function ThingsToDo() {
   );
 }
 
-export default ThingsToDo;
+export default LookingForMore;
 
-// Create similar components for Parks and Looking for More
+

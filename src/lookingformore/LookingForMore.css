@@ -1,0 +1,9 @@
+body {
+	background: linear-gradient(to bottom, #8bfd21, #73BE7C, #b4edbd, #A0DFAA, #e9a27e);
+	animation: bg-animation 10s ease infinite;
+}
+
+@keyframes bg-animation {
+	0% { background-position: 0 0; }
+	100% { background-position: 0 100%; }
+}
