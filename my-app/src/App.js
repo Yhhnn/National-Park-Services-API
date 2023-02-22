@@ -11,7 +11,7 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route exact path="/" component={HomePage} />
+        <Route path="/" element={<HomePage/>} />
         <Route path="/things-to-do" component={ThingsToDo} />
         <Route path="/parks" component={Parks} />
         <Route path="/looking-for-more" component={LookingForMore} />
