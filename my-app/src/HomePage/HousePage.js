@@ -3,7 +3,7 @@ import React from 'react';
 function HomePage() {
   return (
     <div>
-      <h1>Welcome to our website!</h1>
+      <h1>National Parks</h1>
       <ul>
         <li><a href="/things-to-do">Things to Do</a></li>
         <li><a href="/parks">Parks</a></li>
