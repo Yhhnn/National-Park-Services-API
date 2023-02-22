@@ -1,7 +1,6 @@
 import React from 'react';
-import './ThingsToDo.css';
 
-function ThingsToDo() {
+function Parks() {
   return (
     <div>
       <h1>Things to Do</h1>
@@ -15,6 +14,6 @@ function ThingsToDo() {
   );
 }
 
-export default ThingsToDo;
+export default Parks;
 
-
+// Create similar components for Parks and Looking for More
