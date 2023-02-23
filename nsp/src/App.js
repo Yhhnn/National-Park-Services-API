@@ -4,7 +4,7 @@ import HomePage from './homepage/HomePage';
 import ThingsToDo from './thingstodo/ThingsToDo';
 import Parks from './parks/Parks';
 import LookingForMore from './lookingformore/LookingForMore';
-
+import './App.css';
 
 
 function App() {
